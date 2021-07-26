@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module-content version="12.3">
+    <module id="8ec1cd6d-6f3c-4e5e-971a-e7f7f4da569b" name="AcademyAppServer">
+        <resource path="src" publish="true"/>
+    </module>
+</module-content>
