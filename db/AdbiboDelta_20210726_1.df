@@ -1,0 +1,9 @@
+UPDATE FIELD "CustomerID" OF "Customer"
+  INITIAL "?"
+  MANDATORY
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000000074
