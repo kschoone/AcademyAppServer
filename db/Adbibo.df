@@ -1,0 +1,353 @@
+ADD TABLE "Customer"
+  AREA "Schema Area"
+  LABEL "Customer"
+  DUMP-NAME "customer"
+
+ADD FIELD "CustomerName" OF "Customer" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Name"
+  POSITION 2
+  MAX-WIDTH 50
+  ORDER 10
+
+ADD FIELD "CustomerID" OF "Customer" AS integer 
+  FORMAT ">>>>>>9"
+  INITIAL "0"
+  LABEL "Customer"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+
+ADD FIELD "Email" OF "Customer" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Email"
+  POSITION 4
+  MAX-WIDTH 50
+  ORDER 30
+
+ADD FIELD "Birthdate" OF "Customer" AS date 
+  FORMAT "99/99/9999"
+  INITIAL "?"
+  LABEL "Birthdate"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+
+ADD FIELD "Password" OF "Customer" AS character 
+  FORMAT "x(35)"
+  INITIAL ""
+  LABEL "Password"
+  POSITION 6
+  MAX-WIDTH 35
+  ORDER 50
+
+ADD INDEX "kpCustomerID" ON "Customer" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "CustomerID" ASCENDING 
+
+ADD TABLE "Employee"
+  AREA "Schema Area"
+  LABEL "Employee"
+  DUMP-NAME "employee"
+
+ADD FIELD "EmployeeName" OF "Employee" AS character 
+  FORMAT "x(50)"
+  INITIAL ""
+  LABEL "Name"
+  POSITION 2
+  MAX-WIDTH 50
+  ORDER 10
+
+ADD FIELD "EmployeeID" OF "Employee" AS integer 
+  FORMAT ">>>9"
+  INITIAL "?"
+  LABEL "Employee ID"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD INDEX "pkEmployeeID" ON "Employee" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "EmployeeID" ASCENDING 
+
+ADD TABLE "Event"
+  AREA "Schema Area"
+  LABEL "Event"
+  DUMP-NAME "event"
+
+ADD FIELD "EventID" OF "Event" AS integer 
+  FORMAT ">>>9"
+  INITIAL "?"
+  LABEL "Event ID"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "EventName" OF "Event" AS character 
+  FORMAT "x(40)"
+  INITIAL ""
+  LABEL "Name"
+  POSITION 3
+  MAX-WIDTH 40
+  ORDER 20
+
+ADD FIELD "EventCity" OF "Event" AS character 
+  FORMAT "x(30)"
+  INITIAL ""
+  LABEL "City"
+  POSITION 4
+  MAX-WIDTH 30
+  ORDER 30
+
+ADD FIELD "EventDate" OF "Event" AS date 
+  FORMAT "99/99/9999"
+  INITIAL "?"
+  LABEL "Date"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+
+ADD INDEX "pkEventID" ON "Event" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "EventID" ASCENDING 
+
+ADD TABLE "Order"
+  AREA "Schema Area"
+  LABEL "Order"
+  DUMP-NAME "order"
+
+ADD FIELD "OrderID" OF "Order" AS integer 
+  FORMAT ">>>>>>>>9"
+  INITIAL "0"
+  LABEL "Order ID"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "EventID" OF "Order" AS integer 
+  FORMAT ">>>9"
+  INITIAL "?"
+  LABEL "Event ID"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "OrderDate" OF "Order" AS datetime 
+  FORMAT "99/99/99 HH:MM:SS"
+  INITIAL "?"
+  LABEL "Date/Time"
+  POSITION 4
+  MAX-WIDTH 8
+  ORDER 30
+
+ADD FIELD "OrderStatus" OF "Order" AS integer 
+  FORMAT "9"
+  INITIAL "0"
+  LABEL "Status"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+
+ADD FIELD "CustomerID" OF "Order" AS integer 
+  FORMAT ">>>>>>9"
+  INITIAL "0"
+  LABEL "Customer"
+  POSITION 6
+  MAX-WIDTH 4
+  ORDER 50
+
+ADD FIELD "EmployeeID" OF "Order" AS integer 
+  FORMAT ">>>>>9"
+  INITIAL "0"
+  LABEL "Employee"
+  POSITION 7
+  MAX-WIDTH 4
+  ORDER 60
+
+ADD INDEX "pkOrderID" ON "Order" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "OrderID" ASCENDING 
+
+ADD INDEX "fkCustomerID" ON "Order" 
+  AREA "Schema Area"
+  INDEX-FIELD "CustomerID" ASCENDING 
+
+ADD INDEX "fkEmployeeID" ON "Order" 
+  AREA "Schema Area"
+  INDEX-FIELD "EmployeeID" ASCENDING 
+
+ADD INDEX "fkEventID" ON "Order" 
+  AREA "Schema Area"
+  INDEX-FIELD "EventID" ASCENDING 
+
+ADD TABLE "OrderLine"
+  AREA "Schema Area"
+  LABEL "Orderline"
+  DUMP-NAME "orderline"
+
+ADD FIELD "OrderLineID" OF "OrderLine" AS integer 
+  FORMAT ">>>>>>>9"
+  INITIAL "?"
+  LABEL "Orderline ID"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "OrderID" OF "OrderLine" AS integer 
+  FORMAT ">>>>>>>>9"
+  INITIAL "?"
+  LABEL "Order ID"
+  POSITION 3
+  MAX-WIDTH 4
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "Qty" OF "OrderLine" AS integer 
+  FORMAT ">>9"
+  INITIAL "?"
+  LABEL "Quantity"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "ProductID" OF "OrderLine" AS integer 
+  FORMAT ">>>>>>>9"
+  INITIAL "?"
+  LABEL "Product ID"
+  POSITION 5
+  MAX-WIDTH 4
+  ORDER 40
+  MANDATORY
+
+ADD INDEX "pkOrderLineID" ON "OrderLine" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "OrderLineID" ASCENDING 
+
+ADD INDEX "fkOrderID" ON "OrderLine" 
+  AREA "Schema Area"
+  INDEX-FIELD "OrderID" ASCENDING 
+
+ADD INDEX "fkProductID" ON "OrderLine" 
+  AREA "Schema Area"
+  INDEX-FIELD "ProductID" ASCENDING 
+
+ADD TABLE "Product"
+  AREA "Schema Area"
+  LABEL "Product"
+  DUMP-NAME "product"
+
+ADD FIELD "ProductID" OF "Product" AS integer 
+  FORMAT ">>>>>>>>9"
+  INITIAL "?"
+  LABEL "Product ID"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "ProductName" OF "Product" AS character 
+  FORMAT "x(40)"
+  INITIAL "/"
+  POSITION 3
+  MAX-WIDTH 40
+  ORDER 20
+  MANDATORY
+
+ADD FIELD "Price" OF "Product" AS decimal 
+  FORMAT "->>,>>9.99"
+  INITIAL "?"
+  LABEL "Price"
+  POSITION 4
+  MAX-WIDTH 10
+  DECIMALS 2
+  ORDER 30
+  MANDATORY
+
+ADD FIELD "HasAlcohol" OF "Product" AS logical 
+  FORMAT "yes/no"
+  INITIAL "no"
+  LABEL "Has Alcohol"
+  POSITION 5
+  MAX-WIDTH 1
+  ORDER 40
+  MANDATORY
+
+ADD FIELD "Category" OF "Product" AS integer 
+  FORMAT ">>9"
+  INITIAL "?"
+  LABEL "Category"
+  POSITION 6
+  MAX-WIDTH 4
+  ORDER 50
+  MANDATORY
+
+ADD INDEX "pkProductID" ON "Product" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "ProductID" ASCENDING 
+
+ADD TABLE "Stand"
+  AREA "Schema Area"
+  LABEL "Stand"
+  DUMP-NAME "stand"
+
+ADD FIELD "StandID" OF "Stand" AS integer 
+  FORMAT ">>>>>9"
+  INITIAL ?
+  LABEL "Stand ID"
+  POSITION 2
+  MAX-WIDTH 4
+  ORDER 10
+  MANDATORY
+
+ADD FIELD "StandName" OF "Stand" AS character 
+  FORMAT "x(25)"
+  INITIAL ""
+  LABEL "Name"
+  POSITION 3
+  MAX-WIDTH 50
+  ORDER 20
+
+ADD FIELD "EventID" OF "Stand" AS integer 
+  FORMAT ">>>9"
+  INITIAL "?"
+  LABEL "Event ID"
+  POSITION 4
+  MAX-WIDTH 4
+  ORDER 30
+  MANDATORY
+
+ADD INDEX "pkStandID" ON "Stand" 
+  AREA "Schema Area"
+  UNIQUE
+  PRIMARY
+  INDEX-FIELD "StandID" ASCENDING 
+
+ADD INDEX "fkEventID" ON "Stand" 
+  AREA "Schema Area"
+  INDEX-FIELD "EventID" ASCENDING 
+
+.
+PSC
+cpstream=ISO8859-1
+.
+0000006427
