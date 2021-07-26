@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema/databaseConnection.xsd">
+    <databaseconnection identifier="Adbibo">
+        <name>Adbibo</name>
+        <description/>
+        <physicalname>Database\Adbibo.db</physicalname>
+        <logicalname/>
+        <aliases/>
+        <group/>
+        <host>localhost</host>
+        <service>5555</service>
+        <userID/>
+        <password/>
+        <connectionparameters/>
+        <SQLIdentifier>3da4b3a4:17ae1ba5ff4:-7fea</SQLIdentifier>
+        <autoStartServer>true</autoStartServer>
+        <serverParameters>-db Database\Adbibo.db -S 5555 </serverParameters>
+        <autoShutdownServer>true</autoShutdownServer>
+        <OEVersion>12.3</OEVersion>
+        <SQLAlias>
+            <autoLogon>true</autoLogon>
+            <connectAtStartup>false</connectAtStartup>
+            <driverIdentifier>-27</driverIdentifier>
+            <SQLAliasIdentifier>3da4b3a4:17ae1ba5ff4:-7fea</SQLAliasIdentifier>
+            <SQLAliasName>Adbibo</SQLAliasName>
+            <SQLAliasPassword/>
+            <url>jdbc:datadirect:openedge://localhost:5555;databaseName=Adbibo.db</url>
+            <useDriverProperties>false</useDriverProperties>
+            <userName>OEAdmin</userName>
+        </SQLAlias>
+    </databaseconnection>
+</root>
