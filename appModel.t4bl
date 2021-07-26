@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmi:id="_S3q1AO4cEeu7zcooCcx-xA" name="AcademyAppServer.appModel" nsURI="platform:/resource/AcademyAppServer/appModel.t4bl">
+  <eSubpackages xmi:id="_S3vGcO4cEeu7zcooCcx-xA" name="DataType">
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L38O4cEeu7zcooCcx-xA" name="CHARACTER" instanceClassName="EString"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L38e4cEeu7zcooCcx-xA" name="INTEGER" instanceClassName="EInt"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L38u4cEeu7zcooCcx-xA" name="DECIMAL" instanceClassName="EFloat"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L38-4cEeu7zcooCcx-xA" name="LOGICAL" instanceClassName="EBoolean"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L39O4cEeu7zcooCcx-xA" name="DATE" instanceClassName="EDate"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L39e4cEeu7zcooCcx-xA" name="HANDLE" instanceClassName="EObject"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L39u4cEeu7zcooCcx-xA" name="LONGCHAR" instanceClassName="EString"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L39-4cEeu7zcooCcx-xA" name="DATETIME" instanceClassName="EDate"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3-O4cEeu7zcooCcx-xA" name="DATETIME-TZ" instanceClassName="EDate"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3-e4cEeu7zcooCcx-xA" name="BLOB" instanceClassName="java.sql.Blob"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3-u4cEeu7zcooCcx-xA" name="CLOB" instanceClassName="java.sql.Clob"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3--4cEeu7zcooCcx-xA" name="MEMPTR" instanceClassName="EObject"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3_O4cEeu7zcooCcx-xA" name="RAW" instanceClassName="EString"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3_e4cEeu7zcooCcx-xA" name="RECID" instanceClassName="EObject"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3_u4cEeu7zcooCcx-xA" name="ROWID" instanceClassName="EObject"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L3_-4cEeu7zcooCcx-xA" name="WIDGET-HANDLE" instanceClassName="EObject"/>
+    <eClassifiers xsi:type="ecore:EDataType" xmi:id="_S5L4AO4cEeu7zcooCcx-xA" name="COM-HANDLE" instanceClassName="EObject"/>
+  </eSubpackages>
+  <eSubpackages xmi:id="_S5PiUO4cEeu7zcooCcx-xA" name="Dataset.AcademyAppServer.src.Include.dsEvent">
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_S5PiUe4cEeu7zcooCcx-xA" name="dsEvent" instanceClassName="Dataset">
+      <eAnnotations xmi:id="_S5PiUu4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_S5PiU-4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_S5PiVO4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eAnnotations xmi:id="_S5PiVe4cEeu7zcooCcx-xA" source="DiagramInfo">
+        <details xmi:id="_S5PiVu4cEeu7zcooCcx-xA" key="Name" value="/AcademyAppServer/src/Include/dsEvent.dgm"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiV-4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Dataset"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiWe4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiW-4cEeu7zcooCcx-xA" name="Version" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="1.0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiXe4cEeu7zcooCcx-xA" name="ContainerName" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="/AcademyAppServer/src/Include"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiX-4cEeu7zcooCcx-xA" name="FileNamePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiYe4cEeu7zcooCcx-xA" name="FileExtension" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=".i"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiY-4cEeu7zcooCcx-xA" name="CodeTemplate" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="com.openedge.pdt.t4bl.jet.DatasetTemplate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiZe4cEeu7zcooCcx-xA" name="Author" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="&lt;author>"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5PiZ-4cEeu7zcooCcx-xA" name="NEW" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5Piae4cEeu7zcooCcx-xA" name="SHARED" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_S5Pia-4cEeu7zcooCcx-xA" name="REFERENCE-ONLY" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEr5wO4cEeu7zcooCcx-xA" name="contains" eType="_bEmaMO4cEeu7zcooCcx-xA" defaultValueLiteral="contains">
+        <eAnnotations xmi:id="_bEr5we4cEeu7zcooCcx-xA" source="User_Defined"/>
+        <eAnnotations xmi:id="_bEr5wu4cEeu7zcooCcx-xA" source="reference">
+          <details xmi:id="_bEr5w-4cEeu7zcooCcx-xA" key="Proxy" value="true"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bEmaMO4cEeu7zcooCcx-xA" name="ttEvent" instanceClassName="Table">
+      <eAnnotations xmi:id="_bEnBQO4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bEnBQe4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bEnBQu4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBQ-4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Table"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBRe4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBR-4cEeu7zcooCcx-xA" name="DataSource" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBSe4cEeu7zcooCcx-xA" name="GenerateSeparateFile" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBS-4cEeu7zcooCcx-xA" name="ContainerName" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="/AcademyAppServer/src/Include"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBTe4cEeu7zcooCcx-xA" name="FileNamePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBT-4cEeu7zcooCcx-xA" name="FileExtension" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=".i"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBUe4cEeu7zcooCcx-xA" name="CodeTemplate" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="com.openedge.pdt.t4bl.jet.TempTableTemplate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBU-4cEeu7zcooCcx-xA" name="Author" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="&lt;author>"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBVe4cEeu7zcooCcx-xA" name="NEW" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBV-4cEeu7zcooCcx-xA" name="GLOBAL" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBWe4cEeu7zcooCcx-xA" name="SHARED" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBW-4cEeu7zcooCcx-xA" name="NO-UNDO" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBXe4cEeu7zcooCcx-xA" name="BEFORE-TABLE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="bttEvent"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBX-4cEeu7zcooCcx-xA" name="RCODE-INFORMATION" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBYe4cEeu7zcooCcx-xA" name="TableProperties" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBY-4cEeu7zcooCcx-xA" name="TablePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bEnBZe4cEeu7zcooCcx-xA" name="REFERENCE-ONLY" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEnBZ-4cEeu7zcooCcx-xA" name="contains" eType="_bE1DsO4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE1D0O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEnBae4cEeu7zcooCcx-xA" name="contains" eType="_bE2R0O4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE2R8O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEnBa-4cEeu7zcooCcx-xA" name="contains" eType="_bE2R8u4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE2SEu4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEnBbe4cEeu7zcooCcx-xA" name="contains" eType="_bE244O4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE25AO4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bEnBb-4cEeu7zcooCcx-xA" name="contains" eType="_bE25Au4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE25Fu4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bE1DsO4cEeu7zcooCcx-xA" name="EventID" instanceClassName="Column">
+      <eAnnotations xmi:id="_bE1Dse4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bE1Dsu4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bE1Ds-4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DtO4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Column"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dtu4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DuO4cEeu7zcooCcx-xA" name="ColumnMappingType" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Adbibo.Event.EventID"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Duu4cEeu7zcooCcx-xA" name="DATA-TYPE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="integer"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DvO4cEeu7zcooCcx-xA" name="COLUMN-LABEL" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dvu4cEeu7zcooCcx-xA" name="DECIMALS" eType="_S5L38e4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DwO4cEeu7zcooCcx-xA" name="EXTENT" eType="_S5L38e4cEeu7zcooCcx-xA" defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dwu4cEeu7zcooCcx-xA" name="FORMAT" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=">>>9"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DxO4cEeu7zcooCcx-xA" name="HELP" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dxu4cEeu7zcooCcx-xA" name="INITIAL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="?"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DyO4cEeu7zcooCcx-xA" name="LABEL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Event ID"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dyu4cEeu7zcooCcx-xA" name="CASE-SENSITIVE" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1DzO4cEeu7zcooCcx-xA" name="VIEW-AS" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE1Dzu4cEeu7zcooCcx-xA" name="ColumnMappingSource" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE1D0O4cEeu7zcooCcx-xA" eType="_bEmaMO4cEeu7zcooCcx-xA" eOpposite="_bEnBZ-4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE1D0u4cEeu7zcooCcx-xA" eType="_bE25Au4cEeu7zcooCcx-xA" eOpposite="_bE25Eu4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bE2R0O4cEeu7zcooCcx-xA" name="EventName" instanceClassName="Column">
+      <eAnnotations xmi:id="_bE2R0e4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bE2R0u4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bE2R0-4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R1O4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Column"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R1u4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R2O4cEeu7zcooCcx-xA" name="ColumnMappingType" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Adbibo.Event.EventName"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R2u4cEeu7zcooCcx-xA" name="DATA-TYPE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="character"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R3O4cEeu7zcooCcx-xA" name="COLUMN-LABEL" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R3u4cEeu7zcooCcx-xA" name="DECIMALS" eType="_S5L38e4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R4O4cEeu7zcooCcx-xA" name="EXTENT" eType="_S5L38e4cEeu7zcooCcx-xA" defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R4u4cEeu7zcooCcx-xA" name="FORMAT" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="x(40)"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R5O4cEeu7zcooCcx-xA" name="HELP" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R5u4cEeu7zcooCcx-xA" name="INITIAL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R6O4cEeu7zcooCcx-xA" name="LABEL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Name"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R6u4cEeu7zcooCcx-xA" name="CASE-SENSITIVE" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R7O4cEeu7zcooCcx-xA" name="VIEW-AS" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R7u4cEeu7zcooCcx-xA" name="ColumnMappingSource" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE2R8O4cEeu7zcooCcx-xA" eType="_bEmaMO4cEeu7zcooCcx-xA" eOpposite="_bEnBae4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bE2R8u4cEeu7zcooCcx-xA" name="EventCity" instanceClassName="Column">
+      <eAnnotations xmi:id="_bE2R8-4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bE2R9O4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bE2R9e4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R9u4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Column"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R-O4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R-u4cEeu7zcooCcx-xA" name="ColumnMappingType" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Adbibo.Event.EventCity"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R_O4cEeu7zcooCcx-xA" name="DATA-TYPE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="character"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2R_u4cEeu7zcooCcx-xA" name="COLUMN-LABEL" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SAO4cEeu7zcooCcx-xA" name="DECIMALS" eType="_S5L38e4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SAu4cEeu7zcooCcx-xA" name="EXTENT" eType="_S5L38e4cEeu7zcooCcx-xA" defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SBO4cEeu7zcooCcx-xA" name="FORMAT" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="x(30)"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SBu4cEeu7zcooCcx-xA" name="HELP" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SCO4cEeu7zcooCcx-xA" name="INITIAL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SCu4cEeu7zcooCcx-xA" name="LABEL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="City"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SDO4cEeu7zcooCcx-xA" name="CASE-SENSITIVE" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SDu4cEeu7zcooCcx-xA" name="VIEW-AS" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE2SEO4cEeu7zcooCcx-xA" name="ColumnMappingSource" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE2SEu4cEeu7zcooCcx-xA" eType="_bEmaMO4cEeu7zcooCcx-xA" eOpposite="_bEnBa-4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bE244O4cEeu7zcooCcx-xA" name="EventDate" instanceClassName="Column">
+      <eAnnotations xmi:id="_bE244e4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bE244u4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bE244-4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE245O4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Column"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE245u4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE246O4cEeu7zcooCcx-xA" name="ColumnMappingType" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Adbibo.Event.EventDate"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE246u4cEeu7zcooCcx-xA" name="DATA-TYPE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="date"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE247O4cEeu7zcooCcx-xA" name="COLUMN-LABEL" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE247u4cEeu7zcooCcx-xA" name="DECIMALS" eType="_S5L38e4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE248O4cEeu7zcooCcx-xA" name="EXTENT" eType="_S5L38e4cEeu7zcooCcx-xA" defaultValueLiteral="0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE248u4cEeu7zcooCcx-xA" name="FORMAT" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="99/99/9999"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE249O4cEeu7zcooCcx-xA" name="HELP" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE249u4cEeu7zcooCcx-xA" name="INITIAL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="?"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE24-O4cEeu7zcooCcx-xA" name="LABEL" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Date"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE24-u4cEeu7zcooCcx-xA" name="CASE-SENSITIVE" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE24_O4cEeu7zcooCcx-xA" name="VIEW-AS" eType="_S5L38O4cEeu7zcooCcx-xA"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE24_u4cEeu7zcooCcx-xA" name="ColumnMappingSource" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE25AO4cEeu7zcooCcx-xA" eType="_bEmaMO4cEeu7zcooCcx-xA" eOpposite="_bEnBbe4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_bE25Au4cEeu7zcooCcx-xA" name="pkEventID" instanceClassName="Index">
+      <eAnnotations xmi:id="_bE25A-4cEeu7zcooCcx-xA" source="Version">
+        <details xmi:id="_bE25BO4cEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
+        <details xmi:id="_bE25Be4cEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25Bu4cEeu7zcooCcx-xA" name="Type" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Index"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25CO4cEeu7zcooCcx-xA" name="ProxyDefinition" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25Cu4cEeu7zcooCcx-xA" name="IndexProperties" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25DO4cEeu7zcooCcx-xA" name="PRIMARY" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25Du4cEeu7zcooCcx-xA" name="UNIQUE" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_bE25EO4cEeu7zcooCcx-xA" name="WORD" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE25Eu4cEeu7zcooCcx-xA" name="contains" eType="_bE1DsO4cEeu7zcooCcx-xA" containment="true" eOpposite="_bE1D0u4cEeu7zcooCcx-xA">
+        <eAnnotations xmi:id="_bE25E-4cEeu7zcooCcx-xA" source="Relationship">
+          <details xmi:id="_bE25FO4cEeu7zcooCcx-xA" key="Order" value="A"/>
+        </eAnnotations>
+      </eStructuralFeatures>
+      <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_bE25Fu4cEeu7zcooCcx-xA" eType="_bEmaMO4cEeu7zcooCcx-xA" eOpposite="_bEnBb-4cEeu7zcooCcx-xA"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>
