@@ -206,7 +206,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" xmi:id="_0qCBMO6pEeu7zcooCcx-xA" name="eEmployee" instanceClassName="Table">
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_0qCBMO6pEeu7zcooCcx-xA" name="ttEmployee" instanceClassName="Table">
       <eAnnotations xmi:id="_0qCBMe6pEeu7zcooCcx-xA" source="Version">
         <details xmi:id="_0qCBMu6pEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
         <details xmi:id="_0qCBM-6pEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
@@ -227,7 +227,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBTu6pEeu7zcooCcx-xA" name="BEFORE-TABLE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Before_eEmployee"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBUO6pEeu7zcooCcx-xA" name="RCODE-INFORMATION" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBUu6pEeu7zcooCcx-xA" name="TableProperties" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBVO6pEeu7zcooCcx-xA" name="TablePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="e"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBVO6pEeu7zcooCcx-xA" name="TablePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_0qCBVu6pEeu7zcooCcx-xA" name="REFERENCE-ONLY" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
       <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_0qCBWO6pEeu7zcooCcx-xA" name="contains" eType="_0qD2Ye6pEeu7zcooCcx-xA" containment="true" eOpposite="_0qD2ge6pEeu7zcooCcx-xA"/>
       <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_0qCBWu6pEeu7zcooCcx-xA" name="contains" eType="_0qEdcO6pEeu7zcooCcx-xA" containment="true" eOpposite="_0qEdkO6pEeu7zcooCcx-xA"/>
@@ -322,7 +322,7 @@
         </eAnnotations>
       </eStructuralFeatures>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" xmi:id="_ApvUcO6qEeu7zcooCcx-xA" name="eCustomer" instanceClassName="Table">
+    <eClassifiers xsi:type="ecore:EClass" xmi:id="_ApvUcO6qEeu7zcooCcx-xA" name="ttCustomer" instanceClassName="Table">
       <eAnnotations xmi:id="_ApvUce6qEeu7zcooCcx-xA" source="Version">
         <details xmi:id="_ApvUcu6qEeu7zcooCcx-xA" key="CurrentVersion" value="1.0"/>
         <details xmi:id="_ApvUc-6qEeu7zcooCcx-xA" key="NewVersion" value="1.0"/>
@@ -343,7 +343,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUju6qEeu7zcooCcx-xA" name="BEFORE-TABLE" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="Before_eCustomer"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUkO6qEeu7zcooCcx-xA" name="RCODE-INFORMATION" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUku6qEeu7zcooCcx-xA" name="TableProperties" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUlO6qEeu7zcooCcx-xA" name="TablePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral="e"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUlO6qEeu7zcooCcx-xA" name="TablePrefix" eType="_S5L38O4cEeu7zcooCcx-xA" defaultValueLiteral=""/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" xmi:id="_ApvUlu6qEeu7zcooCcx-xA" name="REFERENCE-ONLY" eType="_S5L38-4cEeu7zcooCcx-xA" defaultValueLiteral="false"/>
       <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_ApvUmO6qEeu7zcooCcx-xA" name="contains" eType="_Apwilu6qEeu7zcooCcx-xA" containment="true" eOpposite="_ApxJqO6qEeu7zcooCcx-xA"/>
       <eStructuralFeatures xsi:type="ecore:EReference" xmi:id="_ApvUmu6qEeu7zcooCcx-xA" name="contains" eType="_ApxJqu6qEeu7zcooCcx-xA" containment="true" eOpposite="_ApxJyu6qEeu7zcooCcx-xA"/>

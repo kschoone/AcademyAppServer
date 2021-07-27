@@ -19,7 +19,7 @@ CLASS Customer.CustomerBE INHERITS BusinessEntity:
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
     
-    {"dsCustomer.i"}
+    {dsCustomer.i}
     
     /* TODO Fill in appropriate datasource tables */ 
     DEFINE DATA-SOURCE srcttCustomer FOR Customer.

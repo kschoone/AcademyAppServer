@@ -19,7 +19,7 @@ CLASS Employee.EmployeeBE INHERITS BusinessEntity:
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
     
-    {"dsEmployee.i"}
+    {dsEmployee.i}
     
     /* TODO Fill in appropriate datasource tables */ 
     DEFINE DATA-SOURCE srceeEmployee FOR Employee.
