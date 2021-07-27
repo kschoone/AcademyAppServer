@@ -3,6 +3,10 @@
 	<name>AcademyAppServer</name>
 	<comment></comment>
 	<projects>
+		<project>AcademyAppClassic</project>
+		<project>AcademyAppDotNet</project>
+		<project>AcademyAppShared</project>
+		<project>AcademyAppTest</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
