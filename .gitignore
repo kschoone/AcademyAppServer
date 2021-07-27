@@ -1,10 +1,2 @@
-### ProgressABL ###
-# Developer Studio
-/.dbconnection
-/.project
-/.propath
-/debugger.pref
-/protrace*
-*.r
-*.pl
+.dbconnection
 /bin/
