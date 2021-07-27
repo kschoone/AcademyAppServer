@@ -27,25 +27,17 @@ DEFINE VARIABLE oEvent AS EventBE NO-UNDO.
 
 /* ***************************  Main Block  *************************** */
 oEvent = NEW EventBE().
-TEMP-TABLE ttEvent:TRACKING-CHANGES = TRUE.
-CREATE ttEvent.
-ASSIGN ttEvent.EventName = "Test Event"
-       ttEvent.EventCity = "Amsterdam"
-       ttEvent.EventDate = TODAY.
-TEMP-TABLE ttEvent:TRACKING-CHANGES = FALSE.
+/*TEMP-TABLE ttEvent:TRACKING-CHANGES = TRUE. */
+/*CREATE ttEvent.                             */
+/*ASSIGN ttEvent.EventName = "Test Event"     */
+/*       ttEvent.EventCity = "Amsterdam"      */
+/*       ttEvent.EventDate = TODAY.           */
+/*TEMP-TABLE ttEvent:TRACKING-CHANGES = FALSE.*/
+/*                                            */
+/*oEvent:CreateEventBE(DATASET dsEvent).      */
 
-oEvent:CreateEventBE(DATASET dsEvent).    
-
-/*FIND FIRST ttEvent.                */
-/*                                   */
-/*MESSAGE DATASET dsEvent:ERROR SKIP */
-/*        BUFFER ttEvent:ERROR SKIP  */
-/*        BUFFER ttEvent:ERROR-STRING*/
-/*VIEW-AS ALERT-BOX.                 */
-
-       
-       
-       
+oEvent:ReadEventBE("", DATASET dsEvent).
+DISPLAY ttEvent.EventName.      
        
        
        

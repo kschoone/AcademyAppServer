@@ -2,14 +2,14 @@
 /*------------------------------------------------------------------------
     File        : From template DataSet - template for DataSet. 
     Author(s)   : <author>
-    Created     : Mon Jul 26 16:21:05 CEST 2021
+    Created     : Tue Jul 27 09:11:23 CEST 2021
     Version     : 1.0
     Notes       :
   ----------------------------------------------------------------------*/  
-  {ttEvent.i}
+  {ttEmployee.i}
 
   
  
-  @com.openedge.t4bl.model(modeFile="platform:/resource/AcademyAppServer/appModel.t4bl", uuid="_S5QJYO4cEeu7zcooCcx-xA").
+  @com.openedge.t4bl.model(modeFile="platform:/resource/AcademyAppServer/appModel.t4bl", uuid="_yg9b_e6pEeu7zcooCcx-xA").
  				  
-  DEFINE DATASET dsEvent FOR ttEvent .
+  DEFINE DATASET dsEmployee FOR ttEmployee .
