@@ -90,6 +90,17 @@ CLASS Customer.CustomerBE INHERITS BusinessEntity:
     
         SUPER:DeleteData(DATASET dsCustomer BY-REFERENCE).
     END METHOD.
-     
+
+    /*------------------------------------------------------------------------------
+     Purpose:
+     Notes:
+    ------------------------------------------------------------------------------*/
+
+    METHOD PRIVATE VOID ValidateCustomer(  ):
+        FOR EACH ttCustomer:
+        END.
+        RETURN.
+
+    END METHOD.     
     
 END CLASS.

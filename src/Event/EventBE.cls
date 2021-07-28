@@ -81,7 +81,7 @@ CLASS Event.EventBE INHERITS BusinessEntity:
     ------------------------------------------------------------------------------*/
     METHOD PUBLIC VOID UpdateEventBE(INPUT-OUTPUT DATASET dsEvent):            
         THIS-OBJECT:validateEvent(DATASET dsEvent BY-REFERENCE).
-        
+                
         IF NOT DATASET dsEvent:ERROR THEN        
             SUPER:UpdateData(DATASET dsEvent BY-REFERENCE).
                       
@@ -104,12 +104,8 @@ CLASS Event.EventBE INHERITS BusinessEntity:
     METHOD PRIVATE VOID validateEvent(INPUT DATASET dsEvent):
         
         FOR EACH ttEvent:
-            FIND bttEvent WHERE ROWID(bttEvent) = BUFFER ttEvent:AFTER-ROWID NO-ERROR.
-            
-        END.    
-        
-        RETURN.
-
+            FIND bttEvent WHERE ROWID(bttEvent) = BUFFER ttEvent:AFTER-ROWID NO-ERROR.   
+        END.           
     END METHOD.     
     
 END CLASS.
