@@ -69,8 +69,10 @@ CLASS Event.EventBE INHERITS BusinessEntity:
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
     METHOD PUBLIC VOID CreateEventBE(INPUT-OUTPUT DATASET dsEvent):            
-               
-        SUPER:CreateData(DATASET dsEvent BY-REFERENCE).
+        THIS-OBJECT:validateEvent(DATASET dsEvent BY-REFERENCE).
+        
+        IF NOT DATASET dsEvent:ERROR THEN                 
+            SUPER:CreateData(DATASET dsEvent BY-REFERENCE).
     END METHOD.    
     
     /*------------------------------------------------------------------------------
