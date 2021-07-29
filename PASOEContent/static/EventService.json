@@ -1,6 +1,6 @@
 {
     "version": "1.4",
-    "lastModified": "Thu Jul 29 08:37:39 UTC 2021",
+    "lastModified": "Thu Jul 29 13:55:56 CEST 2021",
     "services": [{
         "name": "EventService",
         "address": "\/web\/pdo\/EventService",
