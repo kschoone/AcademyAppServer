@@ -1,3 +1,5 @@
+@openapi.openedge.export FILE(type="REST", executionMode="singleton", useReturnValue="false", writeDataSetBeforeImage="false").
+@progress.service.resource FILE(name="EventBE", URI="/Events", schemaName="dsEvent", schemaFile="").
  
  /*------------------------------------------------------------------------
     File        : EventBE
@@ -56,6 +58,8 @@ CLASS Event.EventBE INHERITS BusinessEntity:
             Purpose:  Get one or more records, based on a filter string                                                                     
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
+    @openapi.openedge.export(type="REST", useReturnValue="false", writeDataSetBeforeImage="false").
+    @progress.service.resourceMapping(type="REST", operation="read", URI="?filter=~{filter~}", alias="", mediaType="application/json").
     METHOD PUBLIC VOID ReadEventBE(
             INPUT filter AS CHARACTER, 
             OUTPUT DATASET dsEvent):

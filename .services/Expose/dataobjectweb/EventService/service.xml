@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><oe_mobile><service><name>EventService</name><resources><path>src/Event/EventBE.cls</path><path>src/Stand/StandBE.cls</path></resources></service></oe_mobile>

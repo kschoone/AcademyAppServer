@@ -71,7 +71,12 @@ CLASS Product.ProductBE INHERITS BusinessEntity:
     ------------------------------------------------------------------------------*/
     METHOD PUBLIC VOID CreateProductBE(INPUT-OUTPUT DATASET dsProduct):            
                
-        SUPER:CreateData(DATASET dsProduct BY-REFERENCE).        
+       /*Validate if Product database exists in memory*/
+       THIS-OBJECT:validateProduct(DATASET dsProduct BY-REFERENCE).
+       
+       //Create new dataset if dataset does not already exist     
+       IF NOT DATASET dsProduct:ERROR THEN     
+            SUPER:CreateData(DATASET dsProduct BY-REFERENCE).        
     END METHOD.    
     
     /*------------------------------------------------------------------------------
@@ -79,8 +84,10 @@ CLASS Product.ProductBE INHERITS BusinessEntity:
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
     METHOD PUBLIC VOID UpdateProductBE(INPUT-OUTPUT DATASET dsProduct):            
+        THIS-OBJECT:validateProduct(DATASET dsProduct BY-REFERENCE).
     
-        SUPER:UpdateData(DATASET dsProduct BY-REFERENCE).          
+        IF NOT DATASET dsProduct:ERROR THEN 
+            SUPER:UpdateData(DATASET dsProduct BY-REFERENCE).          
     END METHOD.
     
     /*------------------------------------------------------------------------------
@@ -88,9 +95,27 @@ CLASS Product.ProductBE INHERITS BusinessEntity:
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
     METHOD PUBLIC VOID DeleteProductBE(INPUT-OUTPUT DATASET dsProduct):                    
-    
-        SUPER:DeleteData(DATASET dsProduct BY-REFERENCE).
+        THIS-OBJECT:validateProduct(DATASET dsProduct BY-REFERENCE).
+        
+        IF NOT DATASET dsProduct:ERROR THEN 
+            SUPER:DeleteData(DATASET dsProduct BY-REFERENCE).
     END METHOD.
-     
+
+    /*------------------------------------------------------------------------------
+     Purpose:
+     Notes:
+    ------------------------------------------------------------------------------*/
+
+    METHOD PUBLIC VOID validateProduct(INPUT DATASET dsProduct):
+        
+        //For each before-table check if equal to temp-table
+        FOR EACH ttProduct:
+            FIND bttProduct WHERE ROWID(bttProduct) = BUFFER ttProduct:AFTER-ROWID NO-ERROR.
+            
+        END.      
+        
+        RETURN.
+
+    END METHOD.     
     
 END CLASS.
