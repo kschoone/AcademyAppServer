@@ -68,16 +68,23 @@ CLASS Customer.CustomerBE INHERITS BusinessEntity:
             Purpose: Create one or more new records                                                               
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
-    METHOD PUBLIC VOID CreateCustomerBE(INPUT-OUTPUT DATASET dsCustomer):            
-               
-        SUPER:CreateData(DATASET dsCustomer BY-REFERENCE).        
+    METHOD PUBLIC VOID CreateCustomerBE(INPUT-OUTPUT DATASET dsCustomer):  
+        
+        THIS-OBJECT:ValidateCustomer(DATASET dsCustomer BY-REFERENCE) NO-ERROR.
+        IF DATASET dsCustomer:ERROR THEN RETURN.
+        
+        SUPER:CreateData(DATASET dsCustomer BY-REFERENCE).      
+  
     END METHOD.    
     
     /*------------------------------------------------------------------------------
             Purpose:  Update one or more records                                                                  
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
-    METHOD PUBLIC VOID UpdateCustomerBE(INPUT-OUTPUT DATASET dsCustomer):            
+    METHOD PUBLIC VOID UpdateCustomerBE(INPUT-OUTPUT DATASET dsCustomer):
+        
+        THIS-OBJECT:ValidateCustomer(DATASET dsCustomer BY-REFERENCE) NO-ERROR.
+        IF DATASET dsCustomer:ERROR THEN RETURN.
     
         SUPER:UpdateData(DATASET dsCustomer BY-REFERENCE).          
     END METHOD.
@@ -96,8 +103,33 @@ CLASS Customer.CustomerBE INHERITS BusinessEntity:
      Notes:
     ------------------------------------------------------------------------------*/
 
-    METHOD PRIVATE VOID ValidateCustomer(  ):
+    METHOD PRIVATE VOID ValidateCustomer(INPUT-OUTPUT DATASET dsCustomer  ):
         FOR EACH ttCustomer:
+            IF ttCustomer.Birthdate > TODAY THEN DO:
+                ASSIGN BUFFER ttCustomer:REJECTED     = TRUE
+                       BUFFER ttCustomer:ERROR-STRING = "Customer can't be born in the future."
+                       TEMP-TABLE ttCustomer:ERROR    = TRUE
+                       DATASET dsCustomer:ERROR       = TRUE
+                       .
+                NEXT.
+            END.
+            
+            IF ttCustomer.CustomerName = "" THEN DO:
+                ASSIGN BUFFER ttCustomer:REJECTED     = TRUE
+                       BUFFER ttCustomer:ERROR-STRING = "Customer needs a name."
+                       TEMP-TABLE ttCustomer:ERROR    = TRUE
+                       DATASET dsCustomer:ERROR       = TRUE
+                       .
+                NEXT.
+            END.
+            IF NOT ttCustomer.Email MATCHES "*@*" THEN DO:     
+                ASSIGN BUFFER ttCustomer:REJECTED     = TRUE
+                       BUFFER ttCustomer:ERROR-STRING = "Email needs @ to be valid."
+                       TEMP-TABLE ttCustomer:ERROR    = TRUE
+                       DATASET dsCustomer:ERROR       = TRUE
+                       .
+                NEXT.
+            END.
         END.
         RETURN.
 

@@ -26,6 +26,8 @@ DEFINE VARIABLE oCustomer AS CustomerBE NO-UNDO.
 /* ***************************  Main Block  *************************** */
 oCustomer = NEW CustomerBE().
 
-oCustomer:CreateCustomerBE(INPUT-OUTPUT DATASET dsCustomer).
+oCustomer:CreateCustomerBE(INPUT-OUTPUT DATASET dsCustomer) NO-ERROR.
 
 DELETE OBJECT oCustomer.
+
+IF ERROR-STATUS:ERROR THEN RETURN ERROR RETURN-VALUE.

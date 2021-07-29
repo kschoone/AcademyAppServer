@@ -27,5 +27,6 @@ DEFINE VARIABLE oCustomer AS CustomerBE NO-UNDO.
 oCustomer = NEW CustomerBE().
 
 oCustomer:UpdateCustomerBE(INPUT-OUTPUT DATASET dsCustomer).
+IF ERROR-STATUS:ERROR THEN RETURN ERROR.
 
 DELETE OBJECT oCustomer.
