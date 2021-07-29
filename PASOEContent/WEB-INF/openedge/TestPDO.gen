@@ -1,0 +1,133 @@
+{"services": {"TestPDO": {
+    "version": "1.0.0",
+    "operations": {
+        "\/": {"GET": {
+            "contentType": "application\/json",
+            "statusCode": 200,
+            "file": "$CATALINA_BASE\/webapps\/$oepas-webapp\/static\/TestPDO.json"
+        }},
+        "\/Events": {"GET": {
+            "contentType": "application\/json",
+            "options": {"writeBI": false},
+            "entity": {
+                "name": "Event.EventBE",
+                "function": "ReadEventBE",
+                "arg": [
+                    {
+                        "ablName": "filter",
+                        "ablType": "CHARACTER",
+                        "ioMode": "INPUT",
+                        "msgElem": {
+                            "type": "QUERY",
+                            "name": "filter"
+                        }
+                    },
+                    {
+                        "ablName": "dsEvent",
+                        "ablType": "DATASET",
+                        "ioMode": "OUTPUT",
+                        "msgElem": {
+                            "type": "BODY",
+                            "name": null
+                        }
+                    }
+                ]
+            }
+        }},
+        "\/Stands": {"GET": {
+            "contentType": "application\/json",
+            "options": {"writeBI": false},
+            "entity": {
+                "name": "Stand.StandBE",
+                "function": "ReadStandBE",
+                "arg": [
+                    {
+                        "ablName": "filter",
+                        "ablType": "CHARACTER",
+                        "ioMode": "INPUT",
+                        "msgElem": {
+                            "type": "QUERY",
+                            "name": "filter"
+                        }
+                    },
+                    {
+                        "ablName": "dsStand",
+                        "ablType": "DATASET",
+                        "ioMode": "OUTPUT",
+                        "msgElem": {
+                            "type": "BODY",
+                            "name": null
+                        }
+                    }
+                ]
+            }
+        }}
+    },
+    "schemas": {
+        "dsEvent": {"ttEvent": {
+            "trackChanges": true,
+            "indexes": {"pkEventID": {
+                "primary": true,
+                "unique": true,
+                "word": false,
+                "fields": ["EventID:asc"]
+            }},
+            "fields": [
+                {
+                    "name": "EventID",
+                    "ablType": "INTEGER",
+                    "extent": null
+                },
+                {
+                    "name": "EventName",
+                    "ablType": "CHARACTER",
+                    "extent": null
+                },
+                {
+                    "name": "EventCity",
+                    "ablType": "CHARACTER",
+                    "extent": null
+                },
+                {
+                    "name": "EventDate",
+                    "ablType": "DATE",
+                    "extent": null
+                }
+            ]
+        }},
+        "dsStand": {"ttStand": {
+            "trackChanges": true,
+            "indexes": {
+                "pkStandID": {
+                    "primary": true,
+                    "unique": true,
+                    "word": false,
+                    "fields": ["StandID:asc"]
+                },
+                "fkEventID": {
+                    "primary": false,
+                    "unique": false,
+                    "word": false,
+                    "fields": ["EventID:asc"]
+                }
+            },
+            "fields": [
+                {
+                    "name": "StandID",
+                    "ablType": "INTEGER",
+                    "extent": null
+                },
+                {
+                    "name": "StandName",
+                    "ablType": "CHARACTER",
+                    "extent": null
+                },
+                {
+                    "name": "EventID",
+                    "ablType": "INTEGER",
+                    "extent": null
+                }
+            ]
+        }}
+    }
+}}}

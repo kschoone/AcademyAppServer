@@ -1,0 +1,144 @@
+{
+    "version": "1.4",
+    "lastModified": "Thu Jul 29 17:01:32 CEST 2021",
+    "services": [{
+        "name": "TestPDO",
+        "address": "\/web\/pdo\/TestPDO",
+        "useRequest": true,
+        "resources": [
+            {
+                "name": "EventBE",
+                "path": "\/Events",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsEvent": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttEvent": {
+                            "type": "array",
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "EventID": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": null,
+                                        "title": "Event ID"
+                                    },
+                                    "EventName": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "Name"
+                                    },
+                                    "EventCity": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "City"
+                                    },
+                                    "EventDate": {
+                                        "type": "string",
+                                        "ablType": "DATE",
+                                        "default": null,
+                                        "title": "Date",
+                                        "format": "date"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [{
+                    "path": "?filter={filter}",
+                    "useBeforeImage": false,
+                    "type": "read",
+                    "verb": "get",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "type": "QUERY"
+                        },
+                        {
+                            "name": "dsEvent",
+                            "type": "RESPONSE_BODY"
+                        }
+                    ]
+                }]
+            },
+            {
+                "name": "StandBE",
+                "path": "\/Stands",
+                "autoSave": true,
+                "schema": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {"dsStand": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {"ttStand": {
+                            "type": "array",
+                            "items": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "_id": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "_errorString": {
+                                        "type": "string",
+                                        "semanticType": "Internal"
+                                    },
+                                    "StandID": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": 0,
+                                        "title": "Stand ID"
+                                    },
+                                    "StandName": {
+                                        "type": "string",
+                                        "ablType": "CHARACTER",
+                                        "default": "",
+                                        "title": "Name"
+                                    },
+                                    "EventID": {
+                                        "type": "integer",
+                                        "ablType": "INTEGER",
+                                        "default": null,
+                                        "title": "Event ID"
+                                    }
+                                }
+                            }
+                        }}
+                    }}
+                },
+                "operations": [{
+                    "path": "?filter={filter}",
+                    "useBeforeImage": false,
+                    "type": "read",
+                    "verb": "get",
+                    "params": [
+                        {
+                            "name": "filter",
+                            "type": "QUERY"
+                        },
+                        {
+                            "name": "dsStand",
+                            "type": "RESPONSE_BODY"
+                        }
+                    ]
+                }]
+            }
+        ]
+    }]
+}
