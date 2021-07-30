@@ -92,6 +92,117 @@ DEFINE VARIABLE oOrderLineDA AS OrderLineDA NO-UNDO.
     END METHOD.    
     
     /*------------------------------------------------------------------------------
+     Purpose:
+     Notes:
+    ------------------------------------------------------------------------------*/
+
+    METHOD PUBLIC LOGICAL setOrderInProcess(INPUT ipiOrderID AS INTEGER):
+        
+        DEFINE VARIABLE result AS LOGICAL NO-UNDO INITIAL FALSE.
+        DEFINE VARIABLE cFilter AS CHARACTER NO-UNDO.
+        ASSIGN cFilter = "OrderID = " + STRING (ipiOrderID).
+        
+        ReadOrderBE(cFilter, OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+
+        FIND FIRST ttOrderProc NO-ERROR.
+        IF AVAILABLE ttOrderProc THEN DO:
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = TRUE.
+            ASSIGN ttOrderProc.OrderStatus = 1.
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = FALSE.
+            
+            UpdateOrderBE(INPUT-OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+            
+            IF NOT DATASET dsOrderOrderline:ERROR THEN
+                ASSIGN RESULT = TRUE.
+        END.     
+
+        RETURN result.
+
+    END METHOD.
+    
+    /*------------------------------------------------------------------------------
+     Purpose:
+     Notes:
+    ------------------------------------------------------------------------------*/
+
+    METHOD PUBLIC LOGICAL setOrderReady(INPUT ipiOrderID AS INTEGER):
+        
+        DEFINE VARIABLE result AS LOGICAL NO-UNDO INITIAL FALSE.
+        DEFINE VARIABLE cFilter AS CHARACTER NO-UNDO.
+        ASSIGN cFilter = "OrderID = " + STRING (ipiOrderID).
+        
+        ReadOrderBE(cFilter, OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+
+        FIND FIRST ttOrderProc NO-ERROR.
+        IF AVAILABLE ttOrderProc THEN DO:
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = TRUE.
+            ASSIGN ttOrderProc.OrderStatus = 2.
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = FALSE.
+            
+            UpdateOrderBE(INPUT-OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+            
+            IF NOT DATASET dsOrderOrderline:ERROR THEN
+                ASSIGN RESULT = TRUE.
+        END.     
+
+        RETURN result.
+
+    END METHOD.    
+
+    /*------------------------------------------------------------------------------
+     Purpose:
+     Notes:
+    ------------------------------------------------------------------------------*/
+
+    METHOD PUBLIC LOGICAL setOrderPaid(INPUT ipiOrderID AS INTEGER):
+        
+        DEFINE VARIABLE result AS LOGICAL NO-UNDO INITIAL FALSE.
+        DEFINE VARIABLE cFilter AS CHARACTER NO-UNDO.
+        ASSIGN cFilter = "OrderID = " + STRING (ipiOrderID).
+        
+        ReadOrderBE(cFilter, OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+
+        FIND FIRST ttOrderProc NO-ERROR.
+        IF AVAILABLE ttOrderProc THEN DO:
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = TRUE.
+            ASSIGN ttOrderProc.OrderStatus = 3.
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = FALSE.
+            
+            UpdateOrderBE(INPUT-OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+            
+            IF NOT DATASET dsOrderOrderline:ERROR THEN
+                ASSIGN RESULT = TRUE.
+        END.     
+
+        RETURN result.
+
+    END METHOD.  
+
+    METHOD PUBLIC LOGICAL setOrderCancelled(INPUT ipiOrderID AS INTEGER):
+        
+        DEFINE VARIABLE result AS LOGICAL NO-UNDO INITIAL FALSE.
+        DEFINE VARIABLE cFilter AS CHARACTER NO-UNDO.
+        ASSIGN cFilter = "OrderID = " + STRING (ipiOrderID).
+        
+        ReadOrderBE(cFilter, OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+
+        FIND FIRST ttOrderProc NO-ERROR.
+        IF AVAILABLE ttOrderProc THEN DO:
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = TRUE.
+            ASSIGN ttOrderProc.OrderStatus = 9.
+            TEMP-TABLE ttOrderProc:TRACKING-CHANGES = FALSE.
+            
+            UpdateOrderBE(INPUT-OUTPUT DATASET dsOrderOrderLine BY-REFERENCE).
+            
+            IF NOT DATASET dsOrderOrderline:ERROR THEN
+                ASSIGN RESULT = TRUE.
+        END.     
+
+        RETURN result.
+
+    END METHOD.  
+
+    /*------------------------------------------------------------------------------
             Purpose:  Update one or more records                                                                  
             Notes:                                                                        
     ------------------------------------------------------------------------------*/
